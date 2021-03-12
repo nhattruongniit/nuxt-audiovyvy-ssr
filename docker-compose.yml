@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  nuxt:
+    build:
+      context: .
+      dockerfile: ./compose/Dockerfile.prod
+    container_name: audiovyvy_frontend
+    restart: always
+    ports:
+      - '3000:3000'
+    command: 'yarn start'
